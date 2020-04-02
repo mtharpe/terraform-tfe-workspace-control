@@ -11,3 +11,8 @@ resource "tfe_workspace" "azure_demo_setup" {
   name         = "azure-demo"
   organization = var.org_name
 }
+
+resource "tfe_workspace" "gcp_demo_setup" {
+  name         = "gcp-demo"
+  organization = var.org_name
+}
