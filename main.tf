@@ -1,5 +1,5 @@
 provider "tfe" {
-  token = var.test_rfc_tfc_api_key
+  token = var.tfe_api_key
 }
 
 resource "tfe_workspace" "aws_demo_setup" {
