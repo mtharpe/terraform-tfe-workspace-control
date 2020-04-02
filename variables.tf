@@ -1,2 +1,2 @@
-variable "test_rfc_tfc_api_key" {}
+variable "tfe_api_key" {}
 variable "org_name" {}
