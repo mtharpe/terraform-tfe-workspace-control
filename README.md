@@ -1,3 +1,5 @@
+![Terraform GitHub Actions](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20GitHub%20Actions/badge.svg)
+
 # terraform-tfe-workspace-control
 This is a workspace control for demo environment
 
