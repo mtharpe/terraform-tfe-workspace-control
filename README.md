@@ -8,7 +8,7 @@ This is a workspace control for demo environment. You can use this, as well as t
 ## Example
 
 ```ruby
-## Consul
+## Consul Demo Workspace
  resource "tfe_workspace" "aws_consul_demo_setup" {
    name         = "aws-consul-demo"
    organization = var.org_name
