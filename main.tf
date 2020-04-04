@@ -10,6 +10,7 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
     identifier     = "mtharpe/terraform-aws-demo"
     branch         = "master"
     oauth_token_id = var.oauth_token_id
+    queue_all_runs = false
   }
 }
 
@@ -20,6 +21,7 @@ resource "tfe_workspace" "azure_terraform_demo_setup" {
     identifier     = "mtharpe/terraform-azure-demo"
     branch         = "master"
     oauth_token_id = var.oauth_token_id
+    queue_all_runs = false
   }
 }
 
@@ -30,6 +32,7 @@ resource "tfe_workspace" "gcp_terraform_demo_setup" {
     identifier     = "mtharpe/terraform-gcp-demo"
     branch         = "master"
     oauth_token_id = var.oauth_token_id
+    queue_all_runs = false
   }
 }
 
