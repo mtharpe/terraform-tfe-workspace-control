@@ -1,40 +1,46 @@
 ![Terraform GitHub Actions](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20GitHub%20Actions/badge.svg)
 
 # terraform-tfe-workspace-control
-This is a workspace control for demo environment
+This is a workspace control for demo environment. You can use this, as well as the different branches to get access to different demos. 
+
+:warning: This will require a TFE API key as well as well as admin access to the workspace/org that you wouuld like to control.
+
+## Example
+
+```ruby
+## Consul
+ resource "tfe_workspace" "aws_consul_demo_setup" {
+   name         = "aws-consul-demo"
+   organization = var.org_name
+   queue_all_runs = false
+   vcs_repo {
+     identifier     = "someusername/consul-aws-demo"
+     branch         = "master"
+     oauth_token_id = var.oauth_token_id
+  }
+}
+```
 
 ## Requirements
 
-This will require a TFE API key as well as well as admin access to the workspace that you wouuld
-like to control.
+| Name | Version |
+|------|---------|
+| tfe | >= 0.15.1 |
 
 ## Providers
 
-The following providers are used by this module:
+| Name | Version |
+|------|---------|
+| tfe | >= 0.15.1 |
 
-- tfe
+## Inputs
 
-## Required Inputs
-
-The following input variables are required:
-
-### org\_name
-
-Description: TFE Organization Name
-
-Type: `any`
-
-### tfe\_api\_key
-
-Description: TFE API Key
-
-Type: `any`
-
-## Optional Inputs
-
-No optional input.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| oauth\_token\_id | Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS) | `any` | n/a | yes |
+| org\_name | Terraform Enterprise/Cloud Organization name to create the workspaces in | `any` | n/a | yes |
+| tfe\_api\_key | Terraform Enterprise/Cloud API used to connect and configure workspaces | `any` | n/a | yes |
 
 ## Outputs
 
 No output.
-
