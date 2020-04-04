@@ -37,6 +37,9 @@ This is a workspace control for demo environment. You can use this, as well as t
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| aws\_access\_key\_id | AWS Access key | `any` | n/a | yes |
+| aws\_region | AWS Region | `string` | `"us-east-2"` | no |
+| aws\_secret\_access\_key | AWS Secret Access key | `any` | n/a | yes |
 | oauth\_token\_id | Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS) | `any` | n/a | yes |
 | org\_name | Terraform Enterprise/Cloud Organization name to create the workspaces in | `any` | n/a | yes |
 | tfe\_api\_key | Terraform Enterprise/Cloud API used to connect and configure workspaces | `any` | n/a | yes |
