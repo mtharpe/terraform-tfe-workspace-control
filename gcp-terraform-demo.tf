@@ -12,7 +12,7 @@ resource "tfe_workspace" "gcp_terraform_demo_setup" {
 }
 
 resource "tfe_variable" "gcp_credentials" {
-  key          = "google_credentials
+  key          = "google_credentials"
   value        = var.google_credentials
   category     = "terraform"
   workspace_id = tfe_workspace.gcp_terraform_demo_setup.id
