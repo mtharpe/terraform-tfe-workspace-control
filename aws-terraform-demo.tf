@@ -17,6 +17,7 @@ resource "tfe_variable" "aws_access_key_id" {
   category     = "env"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "AWS Access key"
+  sensitive    = true
 }
 
 resource "tfe_variable" "aws_secret_access_key" {
@@ -25,6 +26,7 @@ resource "tfe_variable" "aws_secret_access_key" {
   category     = "env"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "AWS Secret Access key"
+  sensitive    = true
 }
 
 resource "tfe_variable" "aws_default_region" {
