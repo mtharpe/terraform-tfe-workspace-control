@@ -37,13 +37,13 @@ resource "tfe_workspace" "gcp_terraform_demo_setup" {
 }
 
 ## Consul
-resource "tfe_workspace" "aws_consul_demo_setup" {
-  name         = "aws-consul-demo"
-  organization = var.org_name
-  queue_all_runs = false
-  vcs_repo {
-    identifier     = "mtharpe/consul-aws-demo"
-    branch         = "master"
-    oauth_token_id = var.oauth_token_id
-  }
-}
+// resource "tfe_workspace" "aws_consul_demo_setup" {
+//   name         = "aws-consul-demo"
+//   organization = var.org_name
+//   queue_all_runs = false
+//   vcs_repo {
+//     identifier     = "mtharpe/consul-aws-demo"
+//     branch         = "master"
+//     oauth_token_id = var.oauth_token_id
+//   }
+// }
