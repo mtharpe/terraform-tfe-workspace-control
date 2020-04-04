@@ -1,3 +1,4 @@
+# Terraform Enterprise Variables
 variable "tfe_api_key" {
   description = "Terraform Enterprise/Cloud API used to connect and configure workspaces"
 }
@@ -8,6 +9,7 @@ variable "oauth_token_id" {
   description = "Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS)"
 }
 
+# AWS Variables
 variable "aws_access_key_id" {
   description = "AWS Access key"
 }
@@ -19,4 +21,9 @@ variable "aws_secret_access_key" {
 variable "aws_region" {
   description = "AWS Region"
   default     = "us-east-2"
+}
+
+# GCP Variables
+variable "google_credentials" {
+  description = "Google Cloud Credentials"
 }
