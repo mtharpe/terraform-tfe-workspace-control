@@ -1,6 +1,5 @@
 name: 'Terraform GitHub Actions'
 on:
-  - pull_request
   - push
 env:
   tf_version: 'latest'
@@ -40,7 +39,6 @@ jobs:
           tf_actions_comment: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-jobs:
   build:
     runs-on: ubuntu-latest
     steps:
