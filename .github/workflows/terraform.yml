@@ -51,7 +51,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
   release:
     name: Create Release
-    needs: tag
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
