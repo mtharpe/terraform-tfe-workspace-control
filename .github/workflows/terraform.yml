@@ -42,7 +42,7 @@ jobs:
   build:
     name: Create Release
     if: ${{ github.ref == 'master' }}
-    needs: build
+    needs: terraform
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
