@@ -39,8 +39,9 @@ jobs:
           tf_actions_comment: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  build:
+  release:
     runs-on: ubuntu-latest
+    if: success()
     steps:
       - uses: actions/checkout@master
       - name: Bump version and push tag
