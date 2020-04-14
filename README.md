@@ -1,4 +1,4 @@
-![Tag](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Tag/badge.svg) ![Terraform GitHub Actions](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20GitHub%20Actions/badge.svg)
+![Terraform GitHub Actions](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20GitHub%20Actions/badge.svg)
 
 # terraform-tfe-workspace-control
 This is a workspace control for demo environment. You can use this, as well as the different branches to get access to different demos. 
