@@ -1,4 +1,4 @@
-name: 'Terraform GitHub Actions'
+name: 'Terraform Testing and Release'
 on:
   - push
 env:
