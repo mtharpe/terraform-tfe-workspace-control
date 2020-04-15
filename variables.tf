@@ -27,3 +27,20 @@ variable "aws_region" {
 variable "google_credentials" {
   description = "Google Cloud Credentials"
 }
+
+# Azure Variables
+variable "azure_subscription_id" {
+  description = "Azure Subscription ID"
+}
+
+variable "azure_client_id" {
+  description = "Azure Client ID"
+}
+
+variable "azure_tenant_id" {
+  description = "Azure Tenant ID"
+}
+
+variable "azure_client_secret" {
+  description = "Azure Clinet Secret"
+}
