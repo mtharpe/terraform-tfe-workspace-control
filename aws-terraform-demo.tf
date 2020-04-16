@@ -36,3 +36,35 @@ resource "tfe_variable" "aws_default_region" {
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "AWS Default Region"
 }
+
+resource "tfe_variable" "public_key" {
+  key          = "public_key"
+  value        = var.public_key
+  category     = "terraform"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "SSH Public Key"
+}
+
+resource "tfe_variable" "private_key" {
+  key          = "private_key"
+  value        = var.private_key
+  category     = "terraform"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "SSH Private Key"
+}
+
+resource "tfe_variable" "instance_username" {
+  key          = "instance_username"
+  value        = var.instance_username
+  category     = "terraform"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "Instance Username"
+}
+
+resource "tfe_variable" "instance_password" {
+  key          = "instance_password"
+  value        = var.instance_password
+  category     = "terraform"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "Instance Password"
+}
