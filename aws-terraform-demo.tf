@@ -43,6 +43,7 @@ resource "tfe_variable" "public_key" {
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "SSH Public Key"
+  sensitive    = true
 }
 
 resource "tfe_variable" "private_key" {
@@ -51,6 +52,7 @@ resource "tfe_variable" "private_key" {
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "SSH Private Key"
+  sensitive    = true
 }
 
 resource "tfe_variable" "instance_username" {
@@ -67,4 +69,5 @@ resource "tfe_variable" "instance_password" {
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "Instance Password"
+  sensitive    = true
 }
