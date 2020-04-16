@@ -23,6 +23,22 @@ variable "aws_region" {
   default     = "us-east-2"
 }
 
+variable "public_key" {
+  description = "Public key to connect to instances"
+}
+
+variable "private_key" {
+  description = "Private key to connect to instances"
+}
+
+variable "instance_username" {
+  description = "Username to connect to instances"
+}
+
+variable "instance_password" {
+  description = "Password to connect to instances"
+}
+
 # GCP Variables
 variable "google_credentials" {
   description = "Google Cloud Credentials"
