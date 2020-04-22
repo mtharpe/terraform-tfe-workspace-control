@@ -11,6 +11,15 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
   }
 }
 
+resource "tfe_variable" "aws_tfe_user" {
+  key          = "user"
+  value        = var.org_name
+  category     = "terraform"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "TFE ORG User"
+  sensitive    = false
+}
+
 resource "tfe_variable" "aws_access_key_id" {
   key          = "AWS_ACCESS_KEY_ID"
   value        = var.aws_access_key_id
