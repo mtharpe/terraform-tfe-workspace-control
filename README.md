@@ -45,8 +45,14 @@ This is a workspace control for demo environment. You can use this, as well as t
 | azure\_subscription\_id | Azure Subscription ID | `any` | n/a | yes |
 | azure\_tenant\_id | Azure Tenant ID | `any` | n/a | yes |
 | google\_credentials | Google Cloud Credentials | `any` | n/a | yes |
+| google\_project | Google Cloud Project | `any` | n/a | yes |
+| google\_region | Google Cloud Region | `any` | n/a | yes |
+| instance\_password | Password to connect to instances | `any` | n/a | yes |
+| instance\_username | Username to connect to instances | `any` | n/a | yes |
 | oauth\_token\_id | Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS) | `any` | n/a | yes |
 | org\_name | Terraform Enterprise/Cloud Organization name to create the workspaces in | `any` | n/a | yes |
+| private\_key | Private key to connect to instances | `any` | n/a | yes |
+| public\_key | Public key to connect to instances | `any` | n/a | yes |
 | tfe\_api\_key | Terraform Enterprise/Cloud API used to connect and configure workspaces | `any` | n/a | yes |
 
 ## Outputs
