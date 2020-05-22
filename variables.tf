@@ -44,6 +44,10 @@ variable "google_credentials" {
   description = "Google Cloud Credentials"
 }
 
+variable "google_region" {
+  description = "Google Cloud Region"
+}
+
 # Azure Variables
 variable "azure_subscription_id" {
   description = "Azure Subscription ID"
