@@ -58,3 +58,13 @@ This is a workspace control for demo environment. You can use this, as well as t
 ## Outputs
 
 No output.
+
+## License and Maintainer
+
+Maintainer:: HashiCorp (<hello@hashicorp.com>)
+
+Source:: https://github.com/mtharpe/terraform-tfe-workspace-control
+
+Issues:: https://github.com/mtharpe/terraform-tfe-workspace-control/issues
+
+License:: Apache-2.0
