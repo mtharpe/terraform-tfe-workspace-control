@@ -64,7 +64,7 @@ resource "tfe_variable" "private_key" {
   sensitive    = true
 }
 
-resource "tfe_variable" "instance_username" {
+resource "tfe_variable" "aws_instance_username" {
   key          = "instance_username"
   value        = var.instance_username
   category     = "terraform"
@@ -72,7 +72,7 @@ resource "tfe_variable" "instance_username" {
   description  = "Instance Username"
 }
 
-resource "tfe_variable" "instance_password" {
+resource "tfe_variable" "aws_instance_password" {
   key          = "instance_password"
   value        = var.instance_password
   category     = "terraform"

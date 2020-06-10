@@ -43,7 +43,7 @@ resource "tfe_variable" "azure_client_secret" {
   description  = "Azure Client Secret"
 }
 
-resource "tfe_variable" "instance_username" {
+resource "tfe_variable" "azure_instance_username" {
   key          = "instance_username"
   value        = var.instance_username
   category     = "terraform"
@@ -51,7 +51,7 @@ resource "tfe_variable" "instance_username" {
   description  = "Instance Username"
 }
 
-resource "tfe_variable" "instance_password" {
+resource "tfe_variable" "azure_instance_password" {
   key          = "instance_password"
   value        = var.instance_password
   category     = "terraform"
