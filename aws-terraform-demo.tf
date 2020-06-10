@@ -65,7 +65,7 @@ resource "tfe_variable" "private_key" {
 }
 
 resource "tfe_variable" "aws_instance_username" {
-  key          = "instance_username"
+  key          = "aws_instance_username"
   value        = var.instance_username
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
@@ -73,7 +73,7 @@ resource "tfe_variable" "aws_instance_username" {
 }
 
 resource "tfe_variable" "aws_instance_password" {
-  key          = "instance_password"
+  key          = "aws_instance_password"
   value        = var.instance_password
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
