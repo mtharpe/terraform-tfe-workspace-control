@@ -3,7 +3,7 @@
 resource "tfe_workspace" "gcp_terraform_demo_setup" {
   name           = "gcp-terraform-demo"
   organization   = var.org_name
-  queue_all_runs = false
+  queue_all_runs = true
   vcs_repo {
     identifier     = "mtharpe/terraform-gcp-demo"
     branch         = "master"
