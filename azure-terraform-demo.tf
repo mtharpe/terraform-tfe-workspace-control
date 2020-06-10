@@ -3,7 +3,7 @@
 resource "tfe_workspace" "azure_terraform_demo_setup" {
   name           = "azure-terraform-demo"
   organization   = var.org_name
-  queue_all_runs = false
+  queue_all_runs = true
   vcs_repo {
     identifier     = "mtharpe/terraform-azure-demo"
     branch         = "master"
