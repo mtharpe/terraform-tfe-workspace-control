@@ -41,6 +41,7 @@ resource "tfe_variable" "azure_client_secret" {
   category     = "env"
   workspace_id = tfe_workspace.azure_terraform_demo_setup.id
   description  = "Azure Client Secret"
+  sensitive    = true
 }
 
 resource "tfe_variable" "azure_instance_username" {
