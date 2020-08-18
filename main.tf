@@ -1,5 +1,5 @@
 provider "tfe" {
-  version = "= 0.18.1"
+  version = "= 0.20.0"
   token   = var.tfe_api_key
 }
 
