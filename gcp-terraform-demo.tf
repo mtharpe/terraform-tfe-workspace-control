@@ -22,7 +22,7 @@ resource "tfe_variable" "gcp_credentials" {
 
 resource "tfe_variable" "gcp_region" {
   key          = "google_region"
-  value        = var.google_credentials
+  value        = var.google_region
   category     = "terraform"
   workspace_id = tfe_workspace.gcp_terraform_demo_setup.id
   description  = "Google Cloud Region"
