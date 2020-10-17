@@ -11,12 +11,12 @@ This is a workspace control for demo environment. You can use this, as well as t
 ## Consul Demo Workspace
  resource "tfe_workspace" "aws_consul_demo_setup" {
    name         = "aws-consul-demo"
-   organization = var.org_name
+   organization = var.tfe_org_name
    queue_all_runs = false
    vcs_repo {
      identifier     = "someusername/consul-aws-demo"
      branch         = "master"
-     oauth_token_id = var.oauth_token_id
+     oauth_token_id = var.tfe_oauth_token_id
   }
 }
 ```

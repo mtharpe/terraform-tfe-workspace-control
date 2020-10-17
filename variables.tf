@@ -2,11 +2,16 @@
 variable "tfe_api_key" {
   description = "Terraform Enterprise/Cloud API used to connect and configure workspaces"
 }
-variable "org_name" {
+variable "tfe_org_name" {
   description = "Terraform Enterprise/Cloud Organization name to create the workspaces in"
 }
-variable "oauth_token_id" {
+variable "tfe_oauth_token_id" {
   description = "Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS)"
+}
+
+variable "tfe_vcs_username" {
+  description = "VCS username that will prefix the URL for all VCS actions"
+  default = "mtharpe"
 }
 
 # AWS Variables
@@ -23,20 +28,13 @@ variable "aws_region" {
   default     = "us-east-2"
 }
 
+# SSH Keys
 variable "public_key" {
   description = "Public key to connect to instances"
 }
 
 variable "private_key" {
   description = "Private key to connect to instances"
-}
-
-variable "instance_username" {
-  description = "Username to connect to instances"
-}
-
-variable "instance_password" {
-  description = "Password to connect to instances"
 }
 
 # GCP Variables
@@ -67,4 +65,13 @@ variable "azure_tenant_id" {
 
 variable "azure_client_secret" {
   description = "Azure Clinet Secret"
+}
+
+# Instance Information (mainly Azure Windows instances)
+variable "instance_username" {
+  description = "Username to connect to instances"
+}
+
+variable "instance_password" {
+  description = "Password to connect to instances"
 }
