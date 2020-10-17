@@ -11,7 +11,7 @@ variable "tfe_oauth_token_id" {
 
 variable "tfe_vcs_username" {
   description = "VCS username that will prefix the URL for all VCS actions"
-  default = "mtharpe"
+  default     = "mtharpe"
 }
 
 # AWS Variables
