@@ -38,6 +38,15 @@ resource "tfe_variable" "aws_secret_access_key" {
   sensitive    = true
 }
 
+resource "tfe_variable" "aws_session_token" {
+  key          = "AWS_SESSION_TOKEN"
+  value        = var.aws_session_token
+  category     = "env"
+  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
+  description  = "AWS Session Token"
+  sensitive    = true
+}
+
 resource "tfe_variable" "aws_default_region" {
   key          = "AWS_DEFAULT_REGION"
   value        = var.aws_region
