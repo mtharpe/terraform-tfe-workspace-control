@@ -1,7 +1,7 @@
 # Azure Demo Dev Branch
 
 resource "tfe_workspace" "azure_terraform_demo_setup_dev" {
-  name           = "azure-terraform-demo"
+  name           = "azure-terraform-demo-dev"
   organization   = var.org_name
   queue_all_runs = false
   vcs_repo {

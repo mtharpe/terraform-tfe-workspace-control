@@ -1,7 +1,7 @@
 # GCP Demo Dev Branch
 
 resource "tfe_workspace" "gcp_terraform_demo_setup_dev" {
-  name           = "gcp-terraform-demo"
+  name           = "gcp-terraform-demo-dev"
   organization   = var.org_name
   queue_all_runs = false
   vcs_repo {
