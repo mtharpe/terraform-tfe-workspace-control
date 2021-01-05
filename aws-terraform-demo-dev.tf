@@ -1,7 +1,7 @@
 # AWS Demo Dev Branch
 
 resource "tfe_workspace" "aws_terraform_demo_setup_dev" {
-  name           = "aws-terraform-demo"
+  name           = "aws-terraform-demo-dev"
   organization   = var.org_name
   queue_all_runs = false
   vcs_repo {

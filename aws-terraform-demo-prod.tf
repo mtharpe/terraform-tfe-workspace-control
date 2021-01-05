@@ -1,7 +1,7 @@
 # AWS Demo Master Branch
 
 resource "tfe_workspace" "aws_terraform_demo_setup_prod" {
-  name           = "aws-terraform-demo"
+  name           = "aws-terraform-demo-prod"
   organization   = var.org_name
   queue_all_runs = false
   vcs_repo {
