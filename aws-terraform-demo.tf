@@ -4,6 +4,7 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
   name           = "aws-terraform-demo"
   organization   = var.org_name
   queue_all_runs = false
+  tag_names    = ["demo"]
   vcs_repo {
     identifier     = "mtharpe/terraform-aws-demo"
     branch         = "master"
