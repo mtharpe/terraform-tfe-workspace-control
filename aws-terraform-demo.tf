@@ -21,41 +21,6 @@ resource "tfe_variable" "aws_tfe_user" {
   sensitive    = false
 }
 
-resource "tfe_variable" "aws_access_key_id" {
-  key          = "AWS_ACCESS_KEY_ID"
-  value        = var.aws_access_key_id
-  category     = "env"
-  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
-  description  = "AWS Access key"
-  sensitive    = true
-}
-
-resource "tfe_variable" "aws_secret_access_key" {
-  key          = "AWS_SECRET_ACCESS_KEY"
-  value        = var.aws_secret_access_key
-  category     = "env"
-  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
-  description  = "AWS Secret Access key"
-  sensitive    = true
-}
-
-resource "tfe_variable" "aws_session_token" {
-  key          = "AWS_SESSION_TOKEN"
-  value        = var.aws_session_token
-  category     = "env"
-  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
-  description  = "AWS Session Token"
-  sensitive    = true
-}
-
-resource "tfe_variable" "aws_default_region" {
-  key          = "AWS_DEFAULT_REGION"
-  value        = var.aws_region
-  category     = "env"
-  workspace_id = tfe_workspace.aws_terraform_demo_setup.id
-  description  = "AWS Default Region"
-}
-
 resource "tfe_variable" "public_key" {
   key          = "public_key"
   value        = var.public_key
