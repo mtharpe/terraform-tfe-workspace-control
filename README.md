@@ -1,7 +1,7 @@
 ![Terraform Testing and Release](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20Testing%20and%20Release/badge.svg)
 
 # terraform-tfe-workspace-control
-This is a workspace control for demo environment. You can use this, as well as the different branches to get access to different demos. 
+This is a workspace control for demo environment. You can use this, as well as the different branches to get access to different demos. Recently I have updated this repo to a much simplier way of dealing with credentials by using Terraform Cloud/Enterprise Variable Sets.
 
 :warning: This will require a TFE API key as well as well as admin access to the workspace/org that you wouuld like to control.
 
