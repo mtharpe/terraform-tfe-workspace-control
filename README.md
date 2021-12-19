@@ -25,39 +25,54 @@ This is a workspace control for demo environment. You can use this, as well as t
 
 | Name | Version |
 |------|---------|
-| tfe | >= 0.15.1 |
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | >= 0.26.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| tfe | >= 0.15.1 |
+| <a name="provider_http"></a> [http](#provider\_http) | n/a |
+| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | >= 0.26.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [tfe_policy_set.base_policy_set](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/policy_set) | resource |
+| [tfe_sentinel_policy.base_policy](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/sentinel_policy) | resource |
+| [tfe_variable.aws_instance_password](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.aws_instance_username](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.aws_tfe_user](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.azure_instance_password](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.azure_instance_username](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.gcp_instance_password](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.gcp_instance_username](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.private_key](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_variable.public_key](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable) | resource |
+| [tfe_workspace.aws_terraform_demo_setup](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [tfe_workspace.azure_terraform_demo_setup](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [tfe_workspace.gcp_terraform_demo_setup](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [http_http.tfc_ips](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| aws\_access\_key\_id | AWS Access key | `any` | n/a | yes |
-| aws\_region | AWS Region | `string` | `"us-east-2"` | no |
-| aws\_secret\_access\_key | AWS Secret Access key | `any` | n/a | yes |
-| azure\_client\_id | Azure Client ID | `any` | n/a | yes |
-| azure\_client\_secret | Azure Clinet Secret | `any` | n/a | yes |
-| azure\_subscription\_id | Azure Subscription ID | `any` | n/a | yes |
-| azure\_tenant\_id | Azure Tenant ID | `any` | n/a | yes |
-| google\_credentials | Google Cloud Credentials | `any` | n/a | yes |
-| google\_project | Google Cloud Project | `any` | n/a | yes |
-| google\_region | Google Cloud Region | `any` | n/a | yes |
-| instance\_password | Password to connect to instances | `any` | n/a | yes |
-| instance\_username | Username to connect to instances | `any` | n/a | yes |
-| oauth\_token\_id | Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS) | `any` | n/a | yes |
-| org\_name | Terraform Enterprise/Cloud Organization name to create the workspaces in | `any` | n/a | yes |
-| private\_key | Private key to connect to instances | `any` | n/a | yes |
-| public\_key | Public key to connect to instances | `any` | n/a | yes |
-| tfe\_api\_key | Terraform Enterprise/Cloud API used to connect and configure workspaces | `any` | n/a | yes |
+| <a name="input_instance_password"></a> [instance\_password](#input\_instance\_password) | Password to connect to instances | `any` | n/a | yes |
+| <a name="input_instance_username"></a> [instance\_username](#input\_instance\_username) | Username to connect to instances | `any` | n/a | yes |
+| <a name="input_oauth_token_id"></a> [oauth\_token\_id](#input\_oauth\_token\_id) | Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS) | `any` | n/a | yes |
+| <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Terraform Enterprise/Cloud Organization name to create the workspaces in | `any` | n/a | yes |
+| <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Private key to connect to instances | `any` | n/a | yes |
+| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Public key to connect to instances | `any` | n/a | yes |
+| <a name="input_tfe_api_key"></a> [tfe\_api\_key](#input\_tfe\_api\_key) | Terraform Enterprise/Cloud API used to connect and configure workspaces | `any` | n/a | yes |
 
 ## Outputs
 
-No output.
+No outputs.
 
 ## License and Maintainer
 
