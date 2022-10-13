@@ -1,9 +1,9 @@
 # Terraform Variable Sets
 
 resource "tfe_variable_set" "aws" {
-  name          = "AWS Access"
-  description   = "All of the AWS Access Requirements"
-  organization  = var.org_name
+  name         = "AWS Access"
+  description  = "All of the AWS Access Requirements"
+  organization = var.org_name
 }
 
 resource "tfe_workspace_variable_set" "aws" {
@@ -12,9 +12,9 @@ resource "tfe_workspace_variable_set" "aws" {
 }
 
 resource "tfe_variable_set" "azure" {
-  name          = "Azure Access"
-  description   = "All of the Azure Access Requirements"
-  organization  = var.org_name
+  name         = "Azure Access"
+  description  = "All of the Azure Access Requirements"
+  organization = var.org_name
 }
 
 resource "tfe_workspace_variable_set" "azure" {
@@ -23,9 +23,9 @@ resource "tfe_workspace_variable_set" "azure" {
 }
 
 resource "tfe_variable_set" "gcp" {
-  name          = "GCP Access"
-  description   = "All of the GCP Access Requirements"
-  organization  = var.org_name
+  name         = "GCP Access"
+  description  = "All of the GCP Access Requirements"
+  organization = var.org_name
 }
 
 resource "tfe_workspace_variable_set" "gcp" {
