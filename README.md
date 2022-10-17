@@ -1,3 +1,4 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mtharpe/terraform-tfe-workspace-control/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mtharpe/terraform-tfe-workspace-control/tree/master)
 ![Terraform Testing and Release](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20Testing%20and%20Release/badge.svg)
 
 # terraform-tfe-workspace-control
