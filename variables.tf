@@ -1,4 +1,22 @@
 # Terraform Enterprise Variables
+variable "create_aws" {
+  description = "Whether to create AWS workspaces"
+  type        = bool
+  default     = false
+}
+
+variable "create_azure" {
+  description = "Whether to create Azure workspaces"
+  type        = bool
+  default     = false
+}
+
+variable "create_gcp" {
+  description = "Whether to create GCP workspaces"
+  type        = bool
+  default     = false
+}
+
 variable "tfe_api_key" {
   description = "Terraform Enterprise/Cloud API used to connect and configure workspaces"
 }
