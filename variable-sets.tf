@@ -8,7 +8,7 @@ resource "tfe_variable_set" "aws" {
 
 resource "tfe_workspace_variable_set" "aws" {
   variable_set_id = tfe_variable_set.aws.id
-  workspace_id    = tfe_workspace.aws_terraform_demo_setup[count.index]
+  workspace_id    = tfe_workspace.aws_terraform_demo_setup.id
 }
 
 resource "tfe_variable_set" "azure" {
@@ -19,7 +19,7 @@ resource "tfe_variable_set" "azure" {
 
 resource "tfe_workspace_variable_set" "azure" {
   variable_set_id = tfe_variable_set.azure.id
-  workspace_id    = tfe_workspace.azure_terraform_demo_setup[count.index]
+  workspace_id    = tfe_workspace.azure_terraform_demo_setup.id
 }
 
 resource "tfe_variable_set" "gcp" {
@@ -30,5 +30,5 @@ resource "tfe_variable_set" "gcp" {
 
 resource "tfe_workspace_variable_set" "gcp" {
   variable_set_id = tfe_variable_set.gcp.id
-  workspace_id    = tfe_workspace.gcp_terraform_demo_setup[count.index]
+  workspace_id    = tfe_workspace.gcp_terraform_demo_setup.id
 }
