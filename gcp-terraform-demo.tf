@@ -18,7 +18,7 @@ resource "tfe_variable" "gcp_instance_username" {
   key          = "gcp_instance_username"
   value        = var.instance_username
   category     = "terraform"
-  workspace_id = tfe_workspace.gcp_terraform_demo_setup.id
+  workspace_id = tfe_workspace.gcp_terraform_demo_setup.id[0]
   description  = "Instance Username"
 }
 
@@ -27,7 +27,7 @@ resource "tfe_variable" "gcp_instance_password" {
   key          = "gcp_instance_password"
   value        = var.instance_password
   category     = "terraform"
-  workspace_id = tfe_workspace.gcp_terraform_demo_setup.id
+  workspace_id = tfe_workspace.gcp_terraform_demo_setup.id[0]
   description  = "Instance Password"
   sensitive    = true
 }
