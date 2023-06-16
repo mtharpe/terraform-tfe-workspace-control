@@ -1,11 +1,11 @@
 # AWS Demo
 
 resource "tfe_workspace" "aws_terraform_demo_setup" {
-  name           = "aws-terraform-demo"
-  organization   = var.org_name
-  queue_all_runs = false
+  name                = "aws-terraform-demo"
+  organization        = var.org_name
+  queue_all_runs      = false
   assessments_enabled = true
-  tag_names      = ["demo"]
+  tag_names           = ["demo"]
   vcs_repo {
     identifier     = "mtharpe/terraform-aws-demo"
     branch         = "master"
