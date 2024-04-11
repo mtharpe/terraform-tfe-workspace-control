@@ -18,10 +18,6 @@ variable "aws_secret_access_key" {
   description = "Private key to connect to instances"
 }
 
-variable "aws_session_token" {
-  description = "Private key to connect to instances"
-}
-
 # SSH Variables
 variable "public_key" {
   description = "Public key to connect to instances"
