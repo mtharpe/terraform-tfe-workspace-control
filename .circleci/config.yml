@@ -6,7 +6,6 @@ workflows:
   format_terraform:
     jobs:
       - terraform/fmt:
-          shallow_checkout: true
           resource_class: small
       - terraform/tflint:
           tflint_cli_args: "--config=.tflint.hcl"
