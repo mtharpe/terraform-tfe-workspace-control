@@ -1,17 +1,10 @@
 version: 2.1
 description: Validate and format Terraform files
 orbs:
-  terraform: "circleci/terraform@3.2.1"
-  tflint: orbies/terraform@8.1.0
+  terraform: "dnd-it/terraform@3.1"
 workflows:
   format_terraform:
     jobs:
-      - terraform/fmt:
-          checkout: true
-  lint_terraform:
-    jobs:
-      - tflint/lint:
-          checkout: true
-          config_file: .tflint.hcl
-          working_directory: ./
-          environtment: all
+      - terraform/fmt
+      - terraform/tflint:
+          tflint_cli_args: "--config=.tflint.hcl"
