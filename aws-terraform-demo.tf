@@ -2,9 +2,10 @@
 
 resource "tfe_workspace" "aws_terraform_demo_setup" {
   name                = "aws-terraform-demo"
-  organization        = var.org_name
+  organization        = var.tfe_org_name
   queue_all_runs      = false
   assessments_enabled = true
+  project_id          = data.tfe_project.aws.id
   tag_names           = ["demo"]
   vcs_repo {
     identifier                 = "mtharpe/terraform-aws-demo"
@@ -15,7 +16,7 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
 
 resource "tfe_variable" "aws_tfe_user" {
   key          = "user"
-  value        = var.org_name
+  value        = var.tfe_org_name
   category     = "terraform"
   workspace_id = tfe_workspace.aws_terraform_demo_setup.id
   description  = "TFE ORG User"
