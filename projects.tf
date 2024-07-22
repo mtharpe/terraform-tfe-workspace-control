@@ -1,3 +1,15 @@
+resource "tfe_project" "default" {
+  organization = var.tfe_org_name
+  name         = "Default Project"
+  description  = "Default Project for Terraform Workspaces"
+}
+
+resource "tfe_project" "vcs" {
+  organization = var.tfe_org_name
+  name         = "VCS"
+  description  = "VCS Project for Terraform Workspaces"
+}
+
 resource "tfe_project" "aws" {
   organization = var.tfe_org_name
   name         = "AWS"
