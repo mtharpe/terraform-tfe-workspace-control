@@ -9,7 +9,7 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
   vcs_repo {
     identifier     = "mtharpe/terraform-aws-demo"
     branch         = "master"
-    oauth_token_id = var.oauth_token_id
+    github_app_installation_id = var.github_app_installation_id
   }
 }
 
