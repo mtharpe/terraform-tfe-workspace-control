@@ -10,6 +10,6 @@ workflows:
           checkout: true
   lint_terraform:
     jobs:
-      - tflint/terraform:
+      - tflint/lint:
           checkout: true
           config_file: .tflint.hcl
