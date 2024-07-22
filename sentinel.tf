@@ -5,9 +5,9 @@ resource "tfe_policy_set" "demo_sentinel_policy_set" {
   workspace_ids = [tfe_workspace.aws_terraform_demo_setup.id]
 
   vcs_repo {
-    identifier         = "mtharpe/terraform-sentinel-common"
-    branch             = "main"
-    ingress_submodules = false
-    github_app_installation_id     = var.github_app_installation_id
+    identifier                 = "mtharpe/terraform-sentinel-common"
+    branch                     = "main"
+    ingress_submodules         = false
+    github_app_installation_id = var.github_app_installation_id
   }
 }

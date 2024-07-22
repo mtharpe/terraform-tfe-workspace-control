@@ -7,8 +7,8 @@ resource "tfe_workspace" "aws_terraform_demo_setup" {
   assessments_enabled = true
   tag_names           = ["demo"]
   vcs_repo {
-    identifier     = "mtharpe/terraform-aws-demo"
-    branch         = "master"
+    identifier                 = "mtharpe/terraform-aws-demo"
+    branch                     = "master"
     github_app_installation_id = var.github_app_installation_id
   }
 }
