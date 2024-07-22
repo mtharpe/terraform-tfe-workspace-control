@@ -1,7 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/mtharpe/terraform-tfe-workspace-control/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mtharpe/terraform-tfe-workspace-control/tree/master)
 
-![Terraform Testing and Release](https://github.com/mtharpe/terraform-tfe-workspace-control/workflows/Terraform%20Testing%20and%20Release/badge.svg)
-
 # terraform-tfe-workspace-control
 This is a workspace control for demo environment. You can use this, as well as the different branches to get access to different demos. Recently I have updated this repo to a much simplier way of dealing with credentials by using Terraform Cloud/Enterprise Variable Sets and using Policy Sets for Sentinel.
 
