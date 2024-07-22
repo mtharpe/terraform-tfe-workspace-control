@@ -7,7 +7,7 @@ variable "org_name" {
   description = "Terraform Enterprise/Cloud Organization name to create the workspaces in"
   type        = string
 }
-variable "oauth_token_id" {
+variable "github_app_installation_id" {
   description = "Terraform Enterprise/Cloud VCS oauth token ID (found in settings/VCS)"
   type        = string
 }

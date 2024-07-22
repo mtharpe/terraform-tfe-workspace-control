@@ -8,6 +8,6 @@ resource "tfe_policy_set" "demo_sentinel_policy_set" {
     identifier         = "mtharpe/terraform-sentinel-common"
     branch             = "main"
     ingress_submodules = false
-    oauth_token_id     = var.oauth_token_id
+    github_app_installation_id     = var.github_app_installation_id
   }
 }
