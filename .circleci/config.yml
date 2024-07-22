@@ -8,12 +8,16 @@ workflows:
       - terraform/fmt:
           resource_class: small
   lint_terraform:
-    jobs:  
+    jobs:
       - terraform/tflint:
           tflint_cli_args: "--config=.tflint.hcl"
           recursive: false
           resource_class: small
+          requires:
+            - format_terraform
   validate_terraform:
     jobs:
       - terraform/validate:
           resource_class: small
+          requires:
+            - lint_terraform
