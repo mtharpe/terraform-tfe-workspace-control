@@ -14,5 +14,4 @@ workflows:
           checkout: true
           config_file: .tflint.hcl
           working_directory: ./
-          environtment:
-            TFLINT_LOG: debug
+          environtment: all
