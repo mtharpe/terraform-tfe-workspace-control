@@ -2,6 +2,7 @@
 
 resource "tfe_workspace" "gcp_terraform_demo_setup" {
   name           = "gcp-terraform-demo"
+  description    = "GCP Demo Environment Setup with Terraform"
   organization   = var.tfe_org_name
   queue_all_runs = false
   tag_names      = ["demo"]
