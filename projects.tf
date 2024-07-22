@@ -3,12 +3,12 @@ resource "tfe_project" "aws" {
   name         = "AWS"
 }
 
-resource "tfe_project" "gcp" {
-  organization = var.tfe_org_name
-  name         = "GCP"
-}
+# resource "tfe_project" "gcp" {
+#   organization = var.tfe_org_name
+#   name         = "GCP"
+# }
 
-resource "tfe_project" "azure" {
-  organization = var.tfe_org_name
-  name         = "azure"
-}
+# resource "tfe_project" "azure" {
+#   organization = var.tfe_org_name
+#   name         = "Azure"
+# }
