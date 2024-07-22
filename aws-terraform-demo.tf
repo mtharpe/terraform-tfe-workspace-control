@@ -2,6 +2,7 @@
 
 resource "tfe_workspace" "aws_terraform_demo_setup" {
   name                = "aws-terraform-demo"
+  description         = "AWS Demo Environment Setup with Terraform"
   organization        = var.tfe_org_name
   queue_all_runs      = false
   assessments_enabled = true
