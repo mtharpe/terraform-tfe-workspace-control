@@ -13,3 +13,7 @@ workflows:
           tflint_cli_args: "--config=.tflint.hcl"
           recursive: false
           resource_class: small
+  validate_terraform:
+    jobs:
+      - terraform/validate:
+          resource_class: small
