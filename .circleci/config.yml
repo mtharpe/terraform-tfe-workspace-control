@@ -3,20 +3,16 @@ description: Validate and format Terraform files
 orbs:
   terraform: "dnd-it/terraform@3.1"
 workflows:
-  format_terraform:
+  terraform:
     jobs:
       - terraform/fmt:
           resource_class: small
-  lint_terraform:
-    jobs:
       - terraform/tflint:
           tflint_cli_args: "--config=.tflint.hcl"
           recursive: false
           resource_class: small
           requires:
             - format_terraform
-  validate_terraform:
-    jobs:
       - terraform/validate:
           resource_class: small
           requires:
