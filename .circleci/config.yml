@@ -13,3 +13,4 @@ workflows:
       - tflint/lint:
           checkout: true
           config_file: .tflint.hcl
+          working_directory: ./
