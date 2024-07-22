@@ -12,8 +12,8 @@ workflows:
           recursive: false
           resource_class: small
           requires:
-            - format_terraform
+            - terraform/fmt
       - terraform/validate:
           resource_class: small
           requires:
-            - lint_terraform
+            - terraform/tflint
