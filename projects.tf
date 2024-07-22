@@ -1,7 +1,7 @@
-resource "tfe_project" "default" {
+resource "tfe_project" "admin" {
   organization = var.tfe_org_name
-  name         = "Default Project"
-  description  = "Default Project for Terraform Workspaces"
+  name         = "Admin Project"
+  description  = "Administration Project for Terraform Workspaces"
 }
 
 resource "tfe_project" "vcs" {
