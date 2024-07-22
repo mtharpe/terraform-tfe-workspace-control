@@ -3,10 +3,6 @@ variable "tfe_api_key" {
   description = "Terraform Enterprise/Cloud API used to connect and configure workspaces"
   type        = string
 }
-variable "tfe_project_id" {
-  description = "Terraform Enterprise/Cloud Project ID"
-  type        = string
-}
 variable "tfe_org_name" {
   description = "Terraform Enterprise/Cloud Organization name to create the workspaces in"
   type        = string
