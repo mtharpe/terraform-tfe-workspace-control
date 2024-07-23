@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-1"
+}
+
 provider "tfe" {
   token = var.tfe_api_key
 }
