@@ -1,21 +1,25 @@
 locals {
-  sentinel_repo        = "mtharpe/terraform-sentinel-policies"
-  sentinel_repo_branch = "main"
+  sentinel_policies_path = "${path.module}/../terraform-sentinel-policies"
+}
+
+data "tfe_slug" "aws" {
+  source_path = "${local.sentinel_policies_path}/aws"
+}
+
+data "tfe_slug" "vcs" {
+  source_path = "${local.sentinel_policies_path}/vcs"
+}
+
+data "tfe_slug" "admin" {
+  source_path = "${local.sentinel_policies_path}/admin"
 }
 
 resource "tfe_policy_set" "aws" {
-  name          = "aws"
-  description   = "Sentinel policies applied to AWS project workspaces (cloud infra + cost guardrails)."
-  organization  = var.tfe_org_name
-  kind          = "sentinel"
-  policies_path = "aws"
-
-  vcs_repo {
-    identifier                 = local.sentinel_repo
-    branch                     = local.sentinel_repo_branch
-    ingress_submodules         = false
-    github_app_installation_id = var.github_app_installation_id
-  }
+  name         = "aws"
+  description  = "Sentinel policies applied to AWS project workspaces (cloud infra + cost guardrails)."
+  organization = var.tfe_org_name
+  kind         = "sentinel"
+  slug         = data.tfe_slug.aws
 }
 
 resource "tfe_project_policy_set" "aws" {
@@ -24,18 +28,11 @@ resource "tfe_project_policy_set" "aws" {
 }
 
 resource "tfe_policy_set" "vcs" {
-  name          = "vcs"
-  description   = "Sentinel policies applied to VCS project workspaces (GitHub/GitLab/TFE repo management)."
-  organization  = var.tfe_org_name
-  kind          = "sentinel"
-  policies_path = "vcs"
-
-  vcs_repo {
-    identifier                 = local.sentinel_repo
-    branch                     = local.sentinel_repo_branch
-    ingress_submodules         = false
-    github_app_installation_id = var.github_app_installation_id
-  }
+  name         = "vcs"
+  description  = "Sentinel policies applied to VCS project workspaces (GitHub/GitLab/TFE repo management)."
+  organization = var.tfe_org_name
+  kind         = "sentinel"
+  slug         = data.tfe_slug.vcs
 }
 
 resource "tfe_project_policy_set" "vcs" {
@@ -44,18 +41,11 @@ resource "tfe_project_policy_set" "vcs" {
 }
 
 resource "tfe_policy_set" "admin" {
-  name          = "admin"
-  description   = "Sentinel policies applied to Admin project workspaces (TFE control plane)."
-  organization  = var.tfe_org_name
-  kind          = "sentinel"
-  policies_path = "admin"
-
-  vcs_repo {
-    identifier                 = local.sentinel_repo
-    branch                     = local.sentinel_repo_branch
-    ingress_submodules         = false
-    github_app_installation_id = var.github_app_installation_id
-  }
+  name         = "admin"
+  description  = "Sentinel policies applied to Admin project workspaces (TFE control plane)."
+  organization = var.tfe_org_name
+  kind         = "sentinel"
+  slug         = data.tfe_slug.admin
 }
 
 resource "tfe_project_policy_set" "admin" {
